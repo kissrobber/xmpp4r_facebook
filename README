@@ -14,12 +14,9 @@ message.subject = subject
 
 client = Jabber::Client.new Jabber::JID.new(id)
 client.connect
-client.auth_sasl(Jabber::SASL::XFacebookPlatform.new(client, '<api key>', '<session key>', '<app secret>'), nil)
+client.auth_sasl(Jabber::SASL::XFacebookPlatform.new(client, '<api key>', '<access token>', '<app secret>'), nil)
 client.send message
 client.close
-
-
-
 
 (I want to work in Silicon Valley as a software engineer.)
 Copyright (c) 2010 kissrobber, released under the GPL license
