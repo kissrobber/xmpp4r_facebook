@@ -18,5 +18,7 @@ client.auth_sasl(Jabber::SASL::XFacebookPlatform.new(client, '<api key>', '<acce
 client.send message
 client.close
 
+
+
 (I want to work in Silicon Valley as a software engineer.)
 Copyright (c) 2010 kissrobber, released under the GPL license
