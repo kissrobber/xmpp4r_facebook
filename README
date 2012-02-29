@@ -1,9 +1,14 @@
 Expansion XMPP4R to authenticate with Facebook Connect in Ruby
 
 ======================================
+Install:
+======================================
+gem install xmpp4r_facebook
+
+======================================
 Sample code:
 ======================================
-require './xmpp4r_facebook.rb'
+require 'xmpp4r_facebook'
 
 id = '<sender username>@chat.facebook.com'
 to = '-<user id>chat.facebook.com'
