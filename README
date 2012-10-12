@@ -11,7 +11,7 @@ Sample code:
 require 'xmpp4r_facebook'
 
 id = '-<sender user id>@chat.facebook.com'
-to = '-<user id>chat.facebook.com'
+to = '-<user id>@chat.facebook.com'
 body = "hello, Im not spam!"
 subject = 'message from ruby'
 message = Jabber::Message.new to, body
@@ -19,11 +19,11 @@ message.subject = subject
 
 client = Jabber::Client.new Jabber::JID.new(id)
 client.connect
-client.auth_sasl(Jabber::SASL::XFacebookPlatform.new(client, '<api key>', '<access token>', '<app secret>'), nil)
+client.auth_sasl(Jabber::SASL::XFacebookPlatform.new(client, '<App ID/API Key>', '<Access Token>', '<App Secret>'), nil)
 client.send message
 client.close
 
-
+Ensure your access token has `xmpp_login` permission. Check at https://developers.facebook.com/tools/debug
 
 (I want to work in Silicon Valley as a software engineer.)
 Copyright (c) 2010 kissrobber, released under the GPL license
